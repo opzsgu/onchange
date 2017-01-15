@@ -16,7 +16,7 @@ void setup() {
 button1.pullup();
 button1.debounce(100);
 
-button1.ignorefirst();
+//button1.ignorefirst();
 button1.strict(HIGH);
 
 Serial.begin(9600);
@@ -56,8 +56,11 @@ button1.strict(HIGH);
 ```
 
 --pullup enable internal pull-up resistor
+
 --debounce(100) in ms set time that button need to stay at one time to be considered as stable state change
+
 --ignorefirst() -- will ignore first state , if you reboot MCU it will ignore begining state so if You trigger to high and on reboot pin will be high it won't trigger, will wait until user trigger low and then trigger to high event
+
 --button1.strict(HIGH); -- will trigger only ONCE for use for example when have toogle button / relay that user switch on / off and we don't want to run our code twice.
 
 
