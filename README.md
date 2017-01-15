@@ -46,7 +46,6 @@ if(button1.changed(LOW))
 Onchange button1(14);
 ```
 
-```
 ##Now in setup we have to apply configuration //or use default
 ```
 button1.pullup();
